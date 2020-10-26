@@ -1,0 +1,21 @@
+18:19:08 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/HelloWorld.c
+Invoking: Cross ARM C Compiler
+arm-none-linux-gnueabi-gcc -mcpu=arm9 -marm -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -I/usr/local/EV3-API-master -MMD -MP -MF"src/HelloWorld.d" -MT"src/HelloWorld.o" -c -o "src/HelloWorld.o" "../src/HelloWorld.c"
+Finished building: ../src/HelloWorld.c
+ 
+Building target: HelloWorld.elf
+Invoking: Cross ARM C Linker
+arm-none-linux-gnueabi-gcc -mcpu=arm9 -marm -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -Xlinker --gc-sections -s -L/usr/local/EV3-API-master -Wl,-Map,"HelloWorld.map" -o "HelloWorld.elf"  ./src/HelloWorld.o   -lev3api -lm
+/usr/local/EV3-API-master/libev3api.a(ev3_timer.o): In function `TimerExit':
+ev3_timer.c:(.text+0x364): undefined reference to `pthread_join'
+/usr/local/EV3-API-master/libev3api.a(ev3_timer.o): In function `TimerInit':
+ev3_timer.c:(.text+0x630): undefined reference to `pthread_create'
+makefile:42: recipe for target 'HelloWorld.elf' failed
+collect2: ld returned 1 exit status
+make: *** [HelloWorld.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+18:19:09 Build Failed. 2 errors, 0 warnings. (took 523ms)
+

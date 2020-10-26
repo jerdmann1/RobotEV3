@@ -1,0 +1,79 @@
+/*
+ \file		HWTest.c
+ \author	${user}
+ \date		${date}
+ \brief		Simple Hello World! for the Ev3
+*/
+#include <ev3.h>
+#include <math.h>
+#include <stdbool.h>
+
+#define FULL_TURN 1100
+#define WHEEL_DIAMETER 56.1
+
+bool turn(double angle){
+	double circumference = (22.9 * M_PI) * (angle/360);
+	circumference = circumference / (WHEEL_DIAMETER * M_PI);
+	int distance = circumference;
+	char display[10];
+	sprintf(display, "%d", distance);
+	TermPrintf("%s\n", display);
+	double rotations = circumference * FULL_TURN;
+	rotations = rotations - 0.5 - (rotations<0);
+	int r = (int)rotations;
+	ResetRotationCount(OUT_B);
+	OnFwdReg(OUT_B, '1');
+	OnRevReg(OUT_C, '1');
+	while(MotorRotationCount(OUT_B) < r)
+	{
+		int distance = MotorRotationCount(OUT_B);
+		char display[10];
+		sprintf(display, "%d", distance);
+		TermPrintf("%s\n", display);
+	}
+	Off(OUT_B);
+	Off(OUT_C);
+	return true;
+}
+
+double calc_rotations(double length){
+	double circumference = WHEEL_DIAMETER * M_PI;
+	return length / circumference;
+}
+
+bool forward(double distance){
+	ResetRotationCount(OUT_B);
+	OnFwdReg(OUT_B, '1');
+	OnFwdReg(OUT_C, '1');
+	double rotations = calc_rotations(distance) * FULL_TURN;
+	rotations = rotations - 0.5 - (rotations<0);
+	int r = (int)rotations;
+	while(MotorRotationCount(OUT_B) < r)
+	{
+		double distance = MotorRotationCount(OUT_B);
+		char display[10];
+		sprintf(display, "%f", distance);
+		TermPrintf("%s\n", display);
+	}
+	Off(OUT_B);
+	Off(OUT_C);
+	return true;
+}
+
+int main(void)
+{
+
+	// INFO This code template works only with recent versions of the API. If TermPrintln is not found,
+	//      please update the API or use the "Hello World EV3 Project Old API" as template.
+
+
+	//TODO Place here your variables
+
+
+	//TODO Place here your code
+	ButtonWaitForPress(BTNCENTER);
+	turn(360);
+	ButtonWaitForPress(BTNCENTER);
+
+	return 0;
+}

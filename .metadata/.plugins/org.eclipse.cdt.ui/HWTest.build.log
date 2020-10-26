@@ -1,0 +1,11 @@
+18:05:20 **** Incremental Build of configuration Debug for project HWTest ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-linux-gnueabi-size --format=berkeley "HWTest.elf"
+   text	   data	    bss	    dec	    hex	filename
+  51707	  10168	  11980	  73855	  1207f	HWTest.elf
+Finished building: HWTest.siz
+ 
+
+18:05:20 Build Finished. 0 errors, 0 warnings. (took 659ms)
+
