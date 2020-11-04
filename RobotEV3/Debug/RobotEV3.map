@@ -114,12 +114,6 @@ Discarded input sections
                 0x00000000        0x0 ./src/RobotEV3.o
  .ARM.extab.text.is_unseen
                 0x00000000        0x0 ./src/RobotEV3.o
- .text.print_room
-                0x00000000        0x0 ./src/RobotEV3.o
- .ARM.extab.text.print_room
-                0x00000000        0x0 ./src/RobotEV3.o
- .ARM.exidx.text.print_room
-                0x00000000        0x0 ./src/RobotEV3.o
  .ARM.extab.text.get_commands
                 0x00000000        0x0 ./src/RobotEV3.o
  .debug_frame   0x00000000        0x0 ./src/RobotEV3.o
@@ -344,36 +338,36 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
 .note.gnu.build-id
  *(.note.gnu.build-id)
 
-.hash           0x00008128      0x25c
+.hash           0x00008128      0x254
  *(.hash)
- .hash          0x00008128      0x25c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .hash          0x00008128      0x254 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
 .gnu.hash
  *(.gnu.hash)
 
-.dynsym         0x00008384      0x520
+.dynsym         0x0000837c      0x500
  *(.dynsym)
- .dynsym        0x00008384      0x520 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .dynsym        0x0000837c      0x500 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.dynstr         0x000088a4      0x31a
+.dynstr         0x0000887c      0x312
  *(.dynstr)
- .dynstr        0x000088a4      0x31a /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .dynstr        0x0000887c      0x312 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.gnu.version    0x00008bbe       0xa4
+.gnu.version    0x00008b8e       0xa0
  *(.gnu.version)
- .gnu.version   0x00008bbe       0xa4 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .gnu.version   0x00008b8e       0xa0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.gnu.version_d  0x00008c64        0x0 load address 0x00008c62
+.gnu.version_d  0x00008c30        0x0 load address 0x00008c2e
  *(.gnu.version_d)
  .gnu.version_d
                 0x00000000        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.gnu.version_r  0x00008c64       0x80
+.gnu.version_r  0x00008c30       0x80
  *(.gnu.version_r)
  .gnu.version_r
-                0x00008c64       0x80 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+                0x00008c30       0x80 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.rel.dyn        0x00008ce4        0x8
+.rel.dyn        0x00008cb0        0x8
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  *(.rel.fini)
@@ -385,7 +379,7 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
  *(.rel.ctors)
  *(.rel.dtors)
  *(.rel.got)
- .rel.got       0x00008ce4        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .rel.got       0x00008cb0        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
  .rel.bss       0x00000000        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
@@ -408,538 +402,538 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
 .rela.ifunc.dyn
  *(.rela.ifunc.*)
 
-.rel.plt        0x00008cec      0x250
+.rel.plt        0x00008cb8      0x250
  *(.rel.plt)
- .rel.plt       0x00008cec      0x250 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .rel.plt       0x00008cb8      0x250 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
 .rela.plt
  *(.rela.plt)
 
-.init           0x00008f3c       0x10
+.init           0x00008f08       0x10
  *(.init)
- .init          0x00008f3c        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
-                0x00008f3c                _init
- .init          0x00008f44        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
+ .init          0x00008f08        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+                0x00008f08                _init
+ .init          0x00008f10        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
 
-.plt            0x00008f4c      0x38c
+.plt            0x00008f18      0x38c
  *(.plt)
- .plt           0x00008f4c      0x38c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
-                0x00008f60                open@@GLIBC_2.4
-                0x00008f6c                __ctype_toupper_loc@@GLIBC_2.4
-                0x00008f78                mmap@@GLIBC_2.4
-                0x00008f84                abort@@GLIBC_2.4
-                0x00008f90                connect@@GLIBC_2.4
-                0x00008f9c                vprintf@@GLIBC_2.4
-                0x00008fa8                __xstat@@GLIBC_2.4
-                0x00008fb4                __libc_start_main@@GLIBC_2.4
-                0x00008fc0                epoll_create@@GLIBC_2.4
-                0x00008fd8                vsnprintf@@GLIBC_2.4
-                0x00008fe4                vsprintf@@GLIBC_2.4
-                0x00008ff0                strncpy@@GLIBC_2.4
-                0x00008ffc                fclose@@GLIBC_2.4
-                0x00009008                fgets@@GLIBC_2.4
-                0x00009014                dirname@@GLIBC_2.4
-                0x00009020                listen@@GLIBC_2.4
-                0x0000902c                fopen@@GLIBC_2.4
-                0x00009038                memset@@GLIBC_2.4
-                0x00009044                strrchr@@GLIBC_2.4
-                0x00009050                perror@@GLIBC_2.4
-                0x0000905c                eventfd@@GLIBC_2.7
-                0x00009068                usleep@@GLIBC_2.4
-                0x00009074                free@@GLIBC_2.4
-                0x00009080                read@@GLIBC_2.4
-                0x0000908c                write@@GLIBC_2.4
-                0x00009098                gettimeofday@@GLIBC_2.4
-                0x000090a4                accept@@GLIBC_2.4
-                0x000090b0                pthread_mutex_unlock@@GLIBC_2.4
-                0x000090bc                socket@@GLIBC_2.4
-                0x000090c8                ioctl@@GLIBC_2.4
-                0x000090d4                epoll_wait@@GLIBC_2.4
-                0x000090e0                pthread_mutex_lock@@GLIBC_2.4
-                0x000090ec                strlen@@GLIBC_2.4
-                0x000090f8                sscanf@@GLIBC_2.4
-                0x00009104                pthread_create@@GLIBC_2.4
-                0x00009110                __xpg_basename@@GLIBC_2.4
-                0x0000911c                memcpy@@GLIBC_2.4
-                0x00009128                stpncpy@@GLIBC_2.4
-                0x00009134                strtol@@GLIBC_2.4
-                0x00009140                strcpy@@GLIBC_2.4
-                0x0000914c                strncat@@GLIBC_2.4
-                0x00009158                raise@@GLIBC_2.4
-                0x00009164                strtof@@GLIBC_2.4
-                0x00009170                bind@@GLIBC_2.4
-                0x0000917c                strstr@@GLIBC_2.4
-                0x00009188                close@@GLIBC_2.4
-                0x00009194                fwrite@@GLIBC_2.4
-                0x000091a0                __ctype_b_loc@@GLIBC_2.4
-                0x000091ac                fprintf@@GLIBC_2.4
-                0x000091b8                strdup@@GLIBC_2.4
-                0x000091c4                malloc@@GLIBC_2.4
-                0x000091d0                poll@@GLIBC_2.4
-                0x000091dc                fputc@@GLIBC_2.4
-                0x000091e8                sleep@@GLIBC_2.4
-                0x000091f4                strcat@@GLIBC_2.4
-                0x00009200                memmove@@GLIBC_2.4
-                0x0000920c                eventfd_write@@GLIBC_2.7
-                0x00009218                puts@@GLIBC_2.4
-                0x00009224                munmap@@GLIBC_2.4
-                0x00009230                vfprintf@@GLIBC_2.4
-                0x0000923c                timerfd_create@@GLIBC_2.8
-                0x00009248                nanosleep@@GLIBC_2.4
-                0x00009254                realloc@@GLIBC_2.4
-                0x00009260                timerfd_settime@@GLIBC_2.8
-                0x0000926c                epoll_ctl@@GLIBC_2.4
-                0x00009278                getsockopt@@GLIBC_2.4
-                0x00009284                strcmp@@GLIBC_2.4
-                0x00009290                exit@@GLIBC_2.4
-                0x0000929c                __errno_location@@GLIBC_2.4
-                0x000092a8                pthread_self@@GLIBC_2.4
-                0x000092b4                sprintf@@GLIBC_2.4
-                0x000092c0                pthread_join@@GLIBC_2.4
-                0x000092cc                fputs@@GLIBC_2.4
+ .plt           0x00008f18      0x38c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+                0x00008f2c                open@@GLIBC_2.4
+                0x00008f38                __ctype_toupper_loc@@GLIBC_2.4
+                0x00008f44                mmap@@GLIBC_2.4
+                0x00008f50                abort@@GLIBC_2.4
+                0x00008f5c                connect@@GLIBC_2.4
+                0x00008f68                vprintf@@GLIBC_2.4
+                0x00008f74                __xstat@@GLIBC_2.4
+                0x00008f80                __libc_start_main@@GLIBC_2.4
+                0x00008f8c                epoll_create@@GLIBC_2.4
+                0x00008fa4                vsnprintf@@GLIBC_2.4
+                0x00008fb0                vsprintf@@GLIBC_2.4
+                0x00008fbc                strncpy@@GLIBC_2.4
+                0x00008fc8                fclose@@GLIBC_2.4
+                0x00008fd4                fgets@@GLIBC_2.4
+                0x00008fe0                dirname@@GLIBC_2.4
+                0x00008fec                listen@@GLIBC_2.4
+                0x00008ff8                fopen@@GLIBC_2.4
+                0x00009004                memset@@GLIBC_2.4
+                0x00009010                strrchr@@GLIBC_2.4
+                0x0000901c                perror@@GLIBC_2.4
+                0x00009028                eventfd@@GLIBC_2.7
+                0x00009034                usleep@@GLIBC_2.4
+                0x00009040                free@@GLIBC_2.4
+                0x0000904c                read@@GLIBC_2.4
+                0x00009058                write@@GLIBC_2.4
+                0x00009064                gettimeofday@@GLIBC_2.4
+                0x00009070                accept@@GLIBC_2.4
+                0x0000907c                pthread_mutex_unlock@@GLIBC_2.4
+                0x00009088                socket@@GLIBC_2.4
+                0x00009094                ioctl@@GLIBC_2.4
+                0x000090a0                epoll_wait@@GLIBC_2.4
+                0x000090ac                pthread_mutex_lock@@GLIBC_2.4
+                0x000090b8                strlen@@GLIBC_2.4
+                0x000090c4                sscanf@@GLIBC_2.4
+                0x000090d0                pthread_create@@GLIBC_2.4
+                0x000090dc                __xpg_basename@@GLIBC_2.4
+                0x000090e8                memcpy@@GLIBC_2.4
+                0x000090f4                stpncpy@@GLIBC_2.4
+                0x00009100                strtol@@GLIBC_2.4
+                0x0000910c                strcpy@@GLIBC_2.4
+                0x00009118                strncat@@GLIBC_2.4
+                0x00009124                raise@@GLIBC_2.4
+                0x00009130                strtof@@GLIBC_2.4
+                0x0000913c                bind@@GLIBC_2.4
+                0x00009148                strstr@@GLIBC_2.4
+                0x00009154                close@@GLIBC_2.4
+                0x00009160                fwrite@@GLIBC_2.4
+                0x0000916c                __ctype_b_loc@@GLIBC_2.4
+                0x00009178                fprintf@@GLIBC_2.4
+                0x00009184                strdup@@GLIBC_2.4
+                0x00009190                malloc@@GLIBC_2.4
+                0x0000919c                poll@@GLIBC_2.4
+                0x000091a8                fputc@@GLIBC_2.4
+                0x000091b4                sleep@@GLIBC_2.4
+                0x000091c0                strcat@@GLIBC_2.4
+                0x000091cc                memmove@@GLIBC_2.4
+                0x000091d8                eventfd_write@@GLIBC_2.7
+                0x000091e4                puts@@GLIBC_2.4
+                0x000091f0                munmap@@GLIBC_2.4
+                0x000091fc                vfprintf@@GLIBC_2.4
+                0x00009208                timerfd_create@@GLIBC_2.8
+                0x00009214                nanosleep@@GLIBC_2.4
+                0x00009220                realloc@@GLIBC_2.4
+                0x0000922c                timerfd_settime@@GLIBC_2.8
+                0x00009238                epoll_ctl@@GLIBC_2.4
+                0x00009244                getsockopt@@GLIBC_2.4
+                0x00009250                strcmp@@GLIBC_2.4
+                0x0000925c                exit@@GLIBC_2.4
+                0x00009268                __errno_location@@GLIBC_2.4
+                0x00009274                pthread_self@@GLIBC_2.4
+                0x00009280                sprintf@@GLIBC_2.4
+                0x0000928c                pthread_join@@GLIBC_2.4
+                0x00009298                fputs@@GLIBC_2.4
 
-.text           0x000092d8     0xca10
+.text           0x000092a8     0xcb00
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x000092d8       0x38 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crt1.o
-                0x000092d8                _start
- .text          0x00009310       0x2c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
- .text          0x0000933c       0x50 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
+ .text          0x000092a8       0x38 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crt1.o
+                0x000092a8                _start
+ .text          0x000092e0       0x2c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .text          0x0000930c       0x50 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
+ .text.roundNo  0x0000935c       0xd4 ./src/RobotEV3.o
+                0x0000935c                roundNo
  .text.is_unseen
-                0x0000938c       0x38 ./src/RobotEV3.o
-                0x0000938c                is_unseen
- .text.roundNo  0x000093c4       0xd4 ./src/RobotEV3.o
-                0x000093c4                roundNo
- .text.bfs      0x00009498      0x8bc ./src/RobotEV3.o
-                0x00009498                bfs
+                0x00009430       0x38 ./src/RobotEV3.o
+                0x00009430                is_unseen
+ .text.is_obstacle
+                0x00009468      0x140 ./src/RobotEV3.o
+                0x00009468                is_obstacle
+ .text.bfs      0x000095a8      0x884 ./src/RobotEV3.o
+                0x000095a8                bfs
  .text.get_commands
-                0x00009d54      0xa1c ./src/RobotEV3.o
-                0x00009d54                get_commands
- .text.check_box
-                0x0000a770      0x140 ./src/RobotEV3.o
-                0x0000a770                check_box
+                0x00009e2c      0xa1c ./src/RobotEV3.o
+                0x00009e2c                get_commands
  .text.turn_right
-                0x0000a8b0      0x260 ./src/RobotEV3.o
-                0x0000a8b0                turn_right
+                0x0000a848      0x260 ./src/RobotEV3.o
+                0x0000a848                turn_right
  .text.turn_left
-                0x0000ab10      0x268 ./src/RobotEV3.o
-                0x0000ab10                turn_left
+                0x0000aaa8      0x268 ./src/RobotEV3.o
+                0x0000aaa8                turn_left
  .text.calc_rotations
-                0x0000ad78       0x70 ./src/RobotEV3.o
-                0x0000ad78                calc_rotations
- .text.forward  0x0000ade8      0x1a0 ./src/RobotEV3.o
-                0x0000ade8                forward
- .text.main     0x0000af88      0x590 ./src/RobotEV3.o
-                0x0000af88                main
- .text          0x0000b518     0x2fbc /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
-                0x0000e2b0                LcdUpdate
-                0x0000b858                dLcdDrawPixel
-                0x0000ccbc                CmdDrawLine
-                0x0000c838                vasprintf
-                0x0000b96c                dLcdDrawChar
-                0x0000df08                LcdScroll
-                0x0000c554                DisplayLineX
-                0x0000c2c8                LcdRowToY
-                0x0000b530                dLcdGetFontHeight
-                0x0000b6f8                lcdToFrameBuffer
-                0x0000cbb8                DisplayDraw
-                0x0000c198                LcdText
-                0x0000d884                CmdDrawCircle
-                0x0000c34c                DisplayClrPixel
-                0x0000c188                reverse_bits
-                0x0000c890                LcdPrintf
-                0x0000bebc                dLcdDrawBitmap
-                0x0000b830                LcdInitialized
-                0x0000c16c                LcdGetDisplay
-                0x0000c134                LcdSelectFont
-                0x0000da70                Ev3Clear
-                0x0000d294                CmdDrawEllipse
-                0x0000e204                TermPrintln
-                0x0000b590                dLcdGetNumIcons
-                0x0000b548                dLcdGetIconBits
-                0x0000d01c                CmdDrawRect
-                0x0000e3dc                LcdInit
-                0x0000c2f8                DisplaySetPixel
-                0x0000bd34                dLcdDrawPicture
-                0x0000cad0                LcdTextf
-                0x0000c2a4                DisplayLineHeight
-                0x0000d924                LcdFillWindow
-                0x0000cfac                LineOutEx
-                0x0000cb1c                asprintf
-                0x0000da80                LcdBmpFile
-                0x0000e2dc                LcdSplash
-                0x0000c7e0                LcdSetCursorX
-                0x0000ca5c                Ev3Printf
-                0x0000d808                EllipseOutEx
-                0x0000dfd0                TermPrintf
-                0x0000c6dc                DisplayFrame
-                0x0000be98                dLcdGetBitmapSize
-                0x0000e298                LcdRefresh
-                0x0000c254                LcdPicture
-                0x0000e340                LcdUpdateHandler
-                0x0000de50                LcdWriteDisplayToFile
-                0x0000b518                dLcdGetFontWidth
-                0x0000c800                LcdGetCursorX
-                0x0000c124                LcdSetAutoRefresh
-                0x0000cb44                DisplayErase
-                0x0000c3f4                DisplayFillScreen
-                0x0000b578                dLcdGetIconHeight
-                0x0000db14                _lcdWriteBytesToFile
-                0x0000c1f0                LcdIcon
-                0x0000e494                WriteToLcdDevice
-                0x0000bcb4                dLcdDrawText
-                0x0000c7f0                LcdSetCursorY
-                0x0000decc                LcdWriteFrameBufferToFile
-                0x0000d17c                RectOutEx
-                0x0000da20                LcdClean
-                0x0000c628                DisplayLineY
-                0x0000cb6c                DisplayEraseLine
-                0x0000c3a0                DisplayXorPixel
-                0x0000e240                doUpdateScreen
-                0x0000b904                dLcdReadPixel
-                0x0000de8c                LcdGetFrameBuffer
-                0x0000b560                dLcdGetIconWidth
-                0x0000c764                CmdResolveDrawingMode
-                0x0000c820                LcdResetCursor
-                0x0000ca94                Ev3Println
-                0x0000e358                LcdCloseDevices
-                0x0000c810                LcdGetCursorY
-                0x0000e3ac                LcdExit
-                0x0000b5c0                frameBufferToLcd
-                0x0000d8b8                CircleOutEx
-                0x0000bdf4                dLcdDrawIcon
-                0x0000d1f0                CmdSetPixel
-                0x0000d240                PointOutEx
- .text          0x0000e4d4       0x98 /usr/local/EV3-API-master/libev3api.a(ev3.o)
-                0x0000e4e4                FreeEV3
-                0x0000e520                InitEV3
-                0x0000e4d4                EV3IsInitialized
- .text          0x0000e56c     0x1430 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
-                0x0000f678                OnForEx
-                0x0000e704                OutputGetActualSpeed
-                0x0000ea10                ResetRotationCount
-                0x0000f660                OffEx
-                0x0000e740                MotorBlockTachoCount
-                0x0000ea14                OutputTimeSyncEx
-                0x0000f2ec                SetSpeed
-                0x0000edc8                RotateMotorRampNoWait
-                0x0000e85c                OutputTest
-                0x0000e5e0                OutputInitialized
-                0x0000f2f0                OutputReset
-                0x0000f590                OutputStop
-                0x0000ee34                RotateMotorNoWaitEx
-                0x0000e970                OutputClearCount
-                0x0000ecf8                OutputStepSpeedEx
-                0x0000f750                OnFwdEx
-                0x0000effc                OutputStepPowerEx
-                0x0000f0cc                OutputPolarity
-                0x0000e608                OutputRead
-                0x0000e930                WriteToPWMDevice
-                0x0000f170                OutputStartEx
-                0x0000edf0                RotateMotorRamp
-                0x0000e724                MotorTachoCount
-                0x0000f8d4                OutputInit
-                0x0000eee8                RotateMotorEx
-                0x0000f7e4                ResetOutputs
-                0x0000e778                MotorActualSpeed
-                0x0000f138                SetDirection
-                0x0000f80c                OutputExit
-                0x0000f66c                OnEx
-                0x0000f654                FloatEx
-                0x0000f27c                SetPower
-                0x0000e7b0                OutputState
-                0x0000e56c                OutputToMotorNum
-                0x0000f40c                OutputSetTypes
-                0x0000f36c                ResetTachoCount
-                0x0000f894                OutputOpen
-                0x0000f168                Toggle
-                0x0000eb34                OutputStepSyncEx
-                0x0000e6e0                OutputGetTachoCount
-                0x0000f210                OutputPower
-                0x0000f6bc                OnRevEx
-                0x0000f5fc                SetOutputEx
-                0x0000f354                ResetAllTachoCounts
-                0x0000ec28                OutputTimeSpeedEx
-                0x0000f160                Fwd
-                0x0000f87c                OutputClose
-                0x0000e75c                MotorPower
-                0x0000e794                MotorRotationCount
-                0x0000ef2c                OutputTimePowerEx
-                0x0000f374                ResetBlockTachoCount
-                0x0000f3fc                OnRevSyncEx
-                0x0000e914                MotorBusy
-                0x0000f378                ResetCount
-                0x0000e6bc                OutputGetCount
-                0x0000f4cc                OutputSetTypesArray
-                0x0000eb08                OnForSyncEx
-                0x0000f370                ResetBlockAndTachoCount
-                0x0000f55c                OutputProgramStop
-                0x0000f280                OutputSpeed
-                0x0000f4e4                OutputSetType
-                0x0000f158                Rev
-                0x0000f788                OnFwdRegEx
-                0x0000f6f4                OnRevRegEx
-                0x0000f3c0                OnFwdSyncEx
-                0x0000e5c4                DecodeOutputs
- .text          0x0000f99c      0xf78 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
-                0x0000ff48                PlayTonesEx
-                0x0000fd00                SoundCloseDevices
-                0x0000f9cc                SoundTest
-                0x0000fe74                ClearSound
-                0x0001048c                _playRSOFile
-                0x0000fc0c                _readInt
-                0x0000fba8                _readShort
-                0x0000fea4                SoundExit
-                0x0000fcc4                SoundReady
-                0x0000fec4                PlayToneEx
-                0x0000fde0                WriteToSoundDevice
-                0x0000fb2c                changeBitDepthFrom16To8
-                0x0000fd48                SoundInit
-                0x0000f9fc                _soundInitAdPcm
-                0x00010314                _playSoundSamplesFromStream
-                0x0000fa20                _soundGetAdPcmValue
-                0x00010860                PlayFileEx
-                0x00010624                _playWAVFile
-                0x0000f9a4                SoundInitialized
-                0x0000f99c                SoundOpen
-                0x0000fe94                SoundClose
-                0x0000fb78                SoundState
-                0x00010128                _playRMDFile
-                0x0000fe28                StopSound
-                0x0000fe78                MuteSound
-                0x0000fb94                UnmuteSound
-                0x0000ffb4                PlaySoundEx
- .text          0x00010914      0x5c0 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
-                0x00010918                DisconnectFrom
-                0x000109cc                ReceiveStringFrom
-                0x00010a40                WaitConnection
-                0x00010a18                SendStringTo
-                0x0001098c                BluetoothExit
-                0x00010914                BluetoothInit
-                0x00010d68                ConnectTo
- .text          0x00010ed4      0x28c /usr/local/EV3-API-master/libev3api.a(ev3_button.lejos.o)
-                0x00010ff4                ButtonWaitForPress
-                0x00011138                ButtonWaitForAnyPress
-                0x00010f24                ButtonIsUp
-                0x00010fa0                ButtonWaitForPressAndRelease
-                0x00010f08                ButtonIsDown
-                0x0001114c                ButtonWaitForAnyEvent
- .text          0x00011160       0x84 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
-                0x00011160                InputExit
-                0x00011184                InputInit
- .text          0x000111e4      0x118 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
-                0x0001129c                GetSensor
-                0x00011244                SetAllSensors
-                0x000112ac                SensorsExit
-                0x00011208                exitSensorsUntilPort
-                0x000111e4                SensorsInit
-                0x000111ec                SetSensor
- .text          0x000112fc      0xc80 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
-                0x00011d98                bachk
-                0x00011d1c                basprintf
-                0x00011e80                batostr
-                0x00011cec                bt_free
-                0x000114a0                bt_compidtostr
-                0x00011d48                bafprintf
-                0x00011e14                ba2oui
-                0x00011f40                strtoba
-                0x00011320                bt_error
-                0x00011cf4                basnprintf
-                0x00011cf0                bt_malloc
-                0x00011d70                baprintf
-                0x00011ed4                str2ba
-                0x00011e3c                ba2str
-                0x000112fc                baswap
- .text          0x00011f7c      0x340 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
-                0x00012088                ButtonCoreInitialized
-                0x00011fe0                ButtonCoreReadButtons
-                0x00012050                ButtonCoreReadHWRev
-                0x000120b4                ButtonCoreSetLEDs
-                0x000121e4                ButtonCoreInit
-                0x00011f7c                ButtonCoreReadButton
-                0x0001213c                ButtonCoreExit
- .text          0x000122bc       0x48 /usr/local/EV3-API-master/libev3api.a(ev3_command.o)
-                0x000122bc                Wait
- .text          0x00012304      0x7ec /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
-                0x00012304                TimerInitialized
-                0x00012458                SetTimerCallback
-                0x000125f4                TimerExit
-                0x00012784                TimerInit
-                0x00012330                RemoveTimerCallback
- .text          0x00012af0       0xc8 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
-                0x00012b24                ButtonLedExit
-                0x00012b50                ButtonLedInit
-                0x00012b0c                HardwareVersion
-                0x00012af0                HardwareVersionString
-                0x00012b84                ButtonLedInitialized
- .text          0x00012bb8      0x260 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
-                0x00012cfc                SetLedPattern
-                0x00012bb8                LedWarning
-                0x00012cac                SetLedWarning
-                0x00012d58                LedExit
-                0x00012c20                LedInitialized
-                0x00012da4                LedInit
-                0x00012bec                LedPattern
- .text          0x00012e18      0x6b4 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
-                0x0001301c                ButtonCountEx
-                0x00012e88                SetButtonPressCount
-                0x00012f20                ButtonReleaseCount
-                0x000133a0                ButtonNxcInit
-                0x00013094                ButtonNxcInitialized
-                0x00012e68                SetButtonShortReleaseCount
-                0x00013038                ButtonPressedEx
-                0x000132e4                ButtonNxcSuspend
-                0x00012f44                ButtonLongPressCount
-                0x00012f0c                ButtonPressed
-                0x00012f5c                ButtonCount
-                0x000130bc                ButtonNxcResume
-                0x00012f2c                ButtonLongReleaseCount
-                0x00012f50                ButtonPressCount
-                0x00012ea8                SetButtonLongPressCount
-                0x00012e58                SetButtonState
-                0x0001333c                ButtonNxcExit
-                0x00013084                SetLongAbort
-                0x00013054                SetAbortFlag
-                0x00012f60                ReadButtonEx
-                0x00012fec                SysReadButton
-                0x00012e78                SetButtonReleaseCount
-                0x00012f00                ButtonState
-                0x00012e98                SetButtonLongReleaseCount
-                0x00012f38                ButtonShortReleaseCount
- .text          0x000134cc      0x2a4 /usr/local/EV3-API-master/libev3api.a(ev3_array.o)
-                0x0001368c                CArrayInsert
-                0x00013560                CArrayFree
-                0x000134e8                CArrayStackPop
-                0x000136f8                CArrayStackPush
-                0x000134cc                CArrayAccess
-                0x00013504                CArrayRemove
-                0x00013728                CArrayInit
-                0x00013610                CArrayMirror
-                0x00013680                CArrayEnsureFreeCapacity
-                0x00013584                CArrayChangeCapacity
-                0x000135dc                CArrayEnsureCapacity
- .text          0x00013770      0x378 /usr/local/EV3-API-master/libev3api.a(ev3_timer.ts.o)
-                0x00013770                TimerGetMS
-                0x000139e8                ClearTimer
-                0x00013968                ClearTimerUS
-                0x000138a8                TimerReady
-                0x00013a68                TimerUS
-                0x000137d8                TimerWait
-                0x000139a8                ClearTimerMS
-                0x00013930                SetTimerUS
-                0x000139b0                SetTimer
-                0x00013ab0                FastTimer
-                0x000137ec                TimerGetUS
-                0x00013ad4                Timer
-                0x00013a8c                TimerMS
-                0x00013828                tmInitTimestampSlots
-                0x00013970                SetTimerMS
-                0x000137bc                TimerGetCS
- .text          0x00013ae8      0x3b0 /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
-                0x00013ae8                exitEV3UARTInput
-                0x00013b30                readFromUART
-                0x00013c3c                disableUART
-                0x00013d24                setUARTSensorMode
-                0x00013c7c                waitUartReady
-                0x00013da8                initEV3UARTInput
-                0x00013b9c                writeToUART
- .text          0x00013e98      0x2b8 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
-                0x00013e98                exitEV3IICInput
-                0x00013f78                startPollingFromIIC
-                0x00014004                readFromIICSharedMemory
-                0x00013fb4                initIICPort
-                0x00013edc                writeToIIC
-                0x00014070                readFromIIC
-                0x000140c4                initEV3IICInput
- .text          0x00014150       0xfc /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
-                0x000141c4                initEV3AnalogInput
-                0x00014180                exitEV3AnalogInput
-                0x00014168                readOldDumbSensor
-                0x00014150                readNewDumbSensor
- .text          0x0001424c      0x114 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivsi3.o)
-                0x0001424c                __udivsi3
-                0x0001424c                __aeabi_uidiv
-                0x00014340                __aeabi_uidivmod
- .text          0x00014360      0x148 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divsi3.o)
-                0x00014360                __divsi3
-                0x00014488                __aeabi_idivmod
-                0x00014360                __aeabi_idiv
- .text          0x000144a8      0x41c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_addsubdf3.o)
-                0x00014850                __floatundidf
-                0x000147e8                __floatsidf
-                0x000147c4                __aeabi_ui2d
-                0x000147e8                __aeabi_i2d
-                0x000147c4                __floatunsidf
-                0x000144b0                __subdf3
-                0x00014864                __floatdidf
-                0x000144b4                __adddf3
-                0x00014864                __aeabi_l2d
-                0x00014810                __aeabi_f2d
-                0x00014850                __aeabi_ul2d
-                0x000144a8                __aeabi_drsub
-                0x00014810                __extendsfdf2
-                0x000144b4                __aeabi_dadd
-                0x000144b0                __aeabi_dsub
- .text          0x000148c4      0x49c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_muldivdf3.o)
-                0x000148c4                __muldf3
-                0x00014b54                __divdf3
-                0x000148c4                __aeabi_dmul
-                0x00014b54                __aeabi_ddiv
- .text          0x00014d60      0x144 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_cmpdf2.o)
-                0x00014d60                __gtdf2
-                0x00014d68                __ltdf2
-                0x00014e14                __aeabi_cdcmple
-                0x00014d60                __gedf2
-                0x00014e8c                __aeabi_dcmpgt
-                0x00014d68                __ledf2
-                0x00014e14                __aeabi_cdcmpeq
-                0x00014e2c                __aeabi_dcmpeq
-                0x00014e5c                __aeabi_dcmple
-                0x00014e74                __aeabi_dcmpge
-                0x00014d70                __cmpdf2
-                0x00014e44                __aeabi_dcmplt
-                0x00014d70                __nedf2
-                0x00014df8                __aeabi_cdrcmple
-                0x00014d70                __eqdf2
- .text          0x00014ea4       0x5c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_fixdfsi.o)
-                0x00014ea4                __fixdfsi
-                0x00014ea4                __aeabi_d2iz
- .text          0x00014f00       0xa0 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_truncdfsf2.o)
-                0x00014f00                __aeabi_d2f
-                0x00014f00                __truncdfsf2
- .text          0x00014fa0      0x114 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_cmpsf2.o)
-                0x00014fa0                __gesf2
-                0x00015084                __aeabi_fcmpge
-                0x00015024                __aeabi_cfcmple
-                0x00014fb0                __cmpsf2
-                0x00015014                __aeabi_cfrcmple
-                0x00015024                __aeabi_cfcmpeq
-                0x00014fa8                __lesf2
-                0x00014fa8                __ltsf2
-                0x00014fa0                __gtsf2
-                0x00015054                __aeabi_fcmplt
-                0x00014fb0                __eqsf2
-                0x0001503c                __aeabi_fcmpeq
-                0x00014fb0                __nesf2
-                0x0001506c                __aeabi_fcmple
-                0x0001509c                __aeabi_fcmpgt
- .text          0x000150b4       0x3c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_aeabi_uldivmod.o)
-                0x000150b4                __aeabi_uldivmod
- .text          0x000150f0       0x14 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_dvmd_lnx.o)
-                0x000150f0                __aeabi_idiv0
-                0x000150f0                __aeabi_ldiv0
- .text          0x00015104       0x80 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(bpabi.o)
-                0x00015144                __gnu_ldivmod_helper
-                0x00015104                __gnu_uldivmod_helper
- .text          0x00015184      0x5a4 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divdi3.o)
-                0x00015184                __divdi3
- .text          0x00015728      0x52c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivdi3.o)
-                0x00015728                __udivdi3
- .text          0x00015c54       0x78 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(elf-init.oS)
-                0x00015c54                __libc_csu_fini
-                0x00015c58                __libc_csu_init
- .text          0x00015ccc       0x1c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(stat.oS)
-                0x00015ccc                __stat
-                0x00015ccc                stat
+                0x0000ad10       0x70 ./src/RobotEV3.o
+                0x0000ad10                calc_rotations
+ .text.forward  0x0000ad80      0x1a0 ./src/RobotEV3.o
+                0x0000ad80                forward
+ .text.main     0x0000af20      0x6b8 ./src/RobotEV3.o
+                0x0000af20                main
+ .text          0x0000b5d8     0x2fbc /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+                0x0000e370                LcdUpdate
+                0x0000b918                dLcdDrawPixel
+                0x0000cd7c                CmdDrawLine
+                0x0000c8f8                vasprintf
+                0x0000ba2c                dLcdDrawChar
+                0x0000dfc8                LcdScroll
+                0x0000c614                DisplayLineX
+                0x0000c388                LcdRowToY
+                0x0000b5f0                dLcdGetFontHeight
+                0x0000b7b8                lcdToFrameBuffer
+                0x0000cc78                DisplayDraw
+                0x0000c258                LcdText
+                0x0000d944                CmdDrawCircle
+                0x0000c40c                DisplayClrPixel
+                0x0000c248                reverse_bits
+                0x0000c950                LcdPrintf
+                0x0000bf7c                dLcdDrawBitmap
+                0x0000b8f0                LcdInitialized
+                0x0000c22c                LcdGetDisplay
+                0x0000c1f4                LcdSelectFont
+                0x0000db30                Ev3Clear
+                0x0000d354                CmdDrawEllipse
+                0x0000e2c4                TermPrintln
+                0x0000b650                dLcdGetNumIcons
+                0x0000b608                dLcdGetIconBits
+                0x0000d0dc                CmdDrawRect
+                0x0000e49c                LcdInit
+                0x0000c3b8                DisplaySetPixel
+                0x0000bdf4                dLcdDrawPicture
+                0x0000cb90                LcdTextf
+                0x0000c364                DisplayLineHeight
+                0x0000d9e4                LcdFillWindow
+                0x0000d06c                LineOutEx
+                0x0000cbdc                asprintf
+                0x0000db40                LcdBmpFile
+                0x0000e39c                LcdSplash
+                0x0000c8a0                LcdSetCursorX
+                0x0000cb1c                Ev3Printf
+                0x0000d8c8                EllipseOutEx
+                0x0000e090                TermPrintf
+                0x0000c79c                DisplayFrame
+                0x0000bf58                dLcdGetBitmapSize
+                0x0000e358                LcdRefresh
+                0x0000c314                LcdPicture
+                0x0000e400                LcdUpdateHandler
+                0x0000df10                LcdWriteDisplayToFile
+                0x0000b5d8                dLcdGetFontWidth
+                0x0000c8c0                LcdGetCursorX
+                0x0000c1e4                LcdSetAutoRefresh
+                0x0000cc04                DisplayErase
+                0x0000c4b4                DisplayFillScreen
+                0x0000b638                dLcdGetIconHeight
+                0x0000dbd4                _lcdWriteBytesToFile
+                0x0000c2b0                LcdIcon
+                0x0000e554                WriteToLcdDevice
+                0x0000bd74                dLcdDrawText
+                0x0000c8b0                LcdSetCursorY
+                0x0000df8c                LcdWriteFrameBufferToFile
+                0x0000d23c                RectOutEx
+                0x0000dae0                LcdClean
+                0x0000c6e8                DisplayLineY
+                0x0000cc2c                DisplayEraseLine
+                0x0000c460                DisplayXorPixel
+                0x0000e300                doUpdateScreen
+                0x0000b9c4                dLcdReadPixel
+                0x0000df4c                LcdGetFrameBuffer
+                0x0000b620                dLcdGetIconWidth
+                0x0000c824                CmdResolveDrawingMode
+                0x0000c8e0                LcdResetCursor
+                0x0000cb54                Ev3Println
+                0x0000e418                LcdCloseDevices
+                0x0000c8d0                LcdGetCursorY
+                0x0000e46c                LcdExit
+                0x0000b680                frameBufferToLcd
+                0x0000d978                CircleOutEx
+                0x0000beb4                dLcdDrawIcon
+                0x0000d2b0                CmdSetPixel
+                0x0000d300                PointOutEx
+ .text          0x0000e594       0x98 /usr/local/EV3-API-master/libev3api.a(ev3.o)
+                0x0000e5a4                FreeEV3
+                0x0000e5e0                InitEV3
+                0x0000e594                EV3IsInitialized
+ .text          0x0000e62c     0x1430 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
+                0x0000f738                OnForEx
+                0x0000e7c4                OutputGetActualSpeed
+                0x0000ead0                ResetRotationCount
+                0x0000f720                OffEx
+                0x0000e800                MotorBlockTachoCount
+                0x0000ead4                OutputTimeSyncEx
+                0x0000f3ac                SetSpeed
+                0x0000ee88                RotateMotorRampNoWait
+                0x0000e91c                OutputTest
+                0x0000e6a0                OutputInitialized
+                0x0000f3b0                OutputReset
+                0x0000f650                OutputStop
+                0x0000eef4                RotateMotorNoWaitEx
+                0x0000ea30                OutputClearCount
+                0x0000edb8                OutputStepSpeedEx
+                0x0000f810                OnFwdEx
+                0x0000f0bc                OutputStepPowerEx
+                0x0000f18c                OutputPolarity
+                0x0000e6c8                OutputRead
+                0x0000e9f0                WriteToPWMDevice
+                0x0000f230                OutputStartEx
+                0x0000eeb0                RotateMotorRamp
+                0x0000e7e4                MotorTachoCount
+                0x0000f994                OutputInit
+                0x0000efa8                RotateMotorEx
+                0x0000f8a4                ResetOutputs
+                0x0000e838                MotorActualSpeed
+                0x0000f1f8                SetDirection
+                0x0000f8cc                OutputExit
+                0x0000f72c                OnEx
+                0x0000f714                FloatEx
+                0x0000f33c                SetPower
+                0x0000e870                OutputState
+                0x0000e62c                OutputToMotorNum
+                0x0000f4cc                OutputSetTypes
+                0x0000f42c                ResetTachoCount
+                0x0000f954                OutputOpen
+                0x0000f228                Toggle
+                0x0000ebf4                OutputStepSyncEx
+                0x0000e7a0                OutputGetTachoCount
+                0x0000f2d0                OutputPower
+                0x0000f77c                OnRevEx
+                0x0000f6bc                SetOutputEx
+                0x0000f414                ResetAllTachoCounts
+                0x0000ece8                OutputTimeSpeedEx
+                0x0000f220                Fwd
+                0x0000f93c                OutputClose
+                0x0000e81c                MotorPower
+                0x0000e854                MotorRotationCount
+                0x0000efec                OutputTimePowerEx
+                0x0000f434                ResetBlockTachoCount
+                0x0000f4bc                OnRevSyncEx
+                0x0000e9d4                MotorBusy
+                0x0000f438                ResetCount
+                0x0000e77c                OutputGetCount
+                0x0000f58c                OutputSetTypesArray
+                0x0000ebc8                OnForSyncEx
+                0x0000f430                ResetBlockAndTachoCount
+                0x0000f61c                OutputProgramStop
+                0x0000f340                OutputSpeed
+                0x0000f5a4                OutputSetType
+                0x0000f218                Rev
+                0x0000f848                OnFwdRegEx
+                0x0000f7b4                OnRevRegEx
+                0x0000f480                OnFwdSyncEx
+                0x0000e684                DecodeOutputs
+ .text          0x0000fa5c      0xf78 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+                0x00010008                PlayTonesEx
+                0x0000fdc0                SoundCloseDevices
+                0x0000fa8c                SoundTest
+                0x0000ff34                ClearSound
+                0x0001054c                _playRSOFile
+                0x0000fccc                _readInt
+                0x0000fc68                _readShort
+                0x0000ff64                SoundExit
+                0x0000fd84                SoundReady
+                0x0000ff84                PlayToneEx
+                0x0000fea0                WriteToSoundDevice
+                0x0000fbec                changeBitDepthFrom16To8
+                0x0000fe08                SoundInit
+                0x0000fabc                _soundInitAdPcm
+                0x000103d4                _playSoundSamplesFromStream
+                0x0000fae0                _soundGetAdPcmValue
+                0x00010920                PlayFileEx
+                0x000106e4                _playWAVFile
+                0x0000fa64                SoundInitialized
+                0x0000fa5c                SoundOpen
+                0x0000ff54                SoundClose
+                0x0000fc38                SoundState
+                0x000101e8                _playRMDFile
+                0x0000fee8                StopSound
+                0x0000ff38                MuteSound
+                0x0000fc54                UnmuteSound
+                0x00010074                PlaySoundEx
+ .text          0x000109d4      0x5c0 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+                0x000109d8                DisconnectFrom
+                0x00010a8c                ReceiveStringFrom
+                0x00010b00                WaitConnection
+                0x00010ad8                SendStringTo
+                0x00010a4c                BluetoothExit
+                0x000109d4                BluetoothInit
+                0x00010e28                ConnectTo
+ .text          0x00010f94      0x28c /usr/local/EV3-API-master/libev3api.a(ev3_button.lejos.o)
+                0x000110b4                ButtonWaitForPress
+                0x000111f8                ButtonWaitForAnyPress
+                0x00010fe4                ButtonIsUp
+                0x00011060                ButtonWaitForPressAndRelease
+                0x00010fc8                ButtonIsDown
+                0x0001120c                ButtonWaitForAnyEvent
+ .text          0x00011220       0x84 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
+                0x00011220                InputExit
+                0x00011244                InputInit
+ .text          0x000112a4      0x118 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
+                0x0001135c                GetSensor
+                0x00011304                SetAllSensors
+                0x0001136c                SensorsExit
+                0x000112c8                exitSensorsUntilPort
+                0x000112a4                SensorsInit
+                0x000112ac                SetSensor
+ .text          0x000113bc      0xc80 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
+                0x00011e58                bachk
+                0x00011ddc                basprintf
+                0x00011f40                batostr
+                0x00011dac                bt_free
+                0x00011560                bt_compidtostr
+                0x00011e08                bafprintf
+                0x00011ed4                ba2oui
+                0x00012000                strtoba
+                0x000113e0                bt_error
+                0x00011db4                basnprintf
+                0x00011db0                bt_malloc
+                0x00011e30                baprintf
+                0x00011f94                str2ba
+                0x00011efc                ba2str
+                0x000113bc                baswap
+ .text          0x0001203c      0x340 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
+                0x00012148                ButtonCoreInitialized
+                0x000120a0                ButtonCoreReadButtons
+                0x00012110                ButtonCoreReadHWRev
+                0x00012174                ButtonCoreSetLEDs
+                0x000122a4                ButtonCoreInit
+                0x0001203c                ButtonCoreReadButton
+                0x000121fc                ButtonCoreExit
+ .text          0x0001237c       0x48 /usr/local/EV3-API-master/libev3api.a(ev3_command.o)
+                0x0001237c                Wait
+ .text          0x000123c4      0x7ec /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
+                0x000123c4                TimerInitialized
+                0x00012518                SetTimerCallback
+                0x000126b4                TimerExit
+                0x00012844                TimerInit
+                0x000123f0                RemoveTimerCallback
+ .text          0x00012bb0       0xc8 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
+                0x00012be4                ButtonLedExit
+                0x00012c10                ButtonLedInit
+                0x00012bcc                HardwareVersion
+                0x00012bb0                HardwareVersionString
+                0x00012c44                ButtonLedInitialized
+ .text          0x00012c78      0x260 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
+                0x00012dbc                SetLedPattern
+                0x00012c78                LedWarning
+                0x00012d6c                SetLedWarning
+                0x00012e18                LedExit
+                0x00012ce0                LedInitialized
+                0x00012e64                LedInit
+                0x00012cac                LedPattern
+ .text          0x00012ed8      0x6b4 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
+                0x000130dc                ButtonCountEx
+                0x00012f48                SetButtonPressCount
+                0x00012fe0                ButtonReleaseCount
+                0x00013460                ButtonNxcInit
+                0x00013154                ButtonNxcInitialized
+                0x00012f28                SetButtonShortReleaseCount
+                0x000130f8                ButtonPressedEx
+                0x000133a4                ButtonNxcSuspend
+                0x00013004                ButtonLongPressCount
+                0x00012fcc                ButtonPressed
+                0x0001301c                ButtonCount
+                0x0001317c                ButtonNxcResume
+                0x00012fec                ButtonLongReleaseCount
+                0x00013010                ButtonPressCount
+                0x00012f68                SetButtonLongPressCount
+                0x00012f18                SetButtonState
+                0x000133fc                ButtonNxcExit
+                0x00013144                SetLongAbort
+                0x00013114                SetAbortFlag
+                0x00013020                ReadButtonEx
+                0x000130ac                SysReadButton
+                0x00012f38                SetButtonReleaseCount
+                0x00012fc0                ButtonState
+                0x00012f58                SetButtonLongReleaseCount
+                0x00012ff8                ButtonShortReleaseCount
+ .text          0x0001358c      0x2a4 /usr/local/EV3-API-master/libev3api.a(ev3_array.o)
+                0x0001374c                CArrayInsert
+                0x00013620                CArrayFree
+                0x000135a8                CArrayStackPop
+                0x000137b8                CArrayStackPush
+                0x0001358c                CArrayAccess
+                0x000135c4                CArrayRemove
+                0x000137e8                CArrayInit
+                0x000136d0                CArrayMirror
+                0x00013740                CArrayEnsureFreeCapacity
+                0x00013644                CArrayChangeCapacity
+                0x0001369c                CArrayEnsureCapacity
+ .text          0x00013830      0x378 /usr/local/EV3-API-master/libev3api.a(ev3_timer.ts.o)
+                0x00013830                TimerGetMS
+                0x00013aa8                ClearTimer
+                0x00013a28                ClearTimerUS
+                0x00013968                TimerReady
+                0x00013b28                TimerUS
+                0x00013898                TimerWait
+                0x00013a68                ClearTimerMS
+                0x000139f0                SetTimerUS
+                0x00013a70                SetTimer
+                0x00013b70                FastTimer
+                0x000138ac                TimerGetUS
+                0x00013b94                Timer
+                0x00013b4c                TimerMS
+                0x000138e8                tmInitTimestampSlots
+                0x00013a30                SetTimerMS
+                0x0001387c                TimerGetCS
+ .text          0x00013ba8      0x3b0 /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
+                0x00013ba8                exitEV3UARTInput
+                0x00013bf0                readFromUART
+                0x00013cfc                disableUART
+                0x00013de4                setUARTSensorMode
+                0x00013d3c                waitUartReady
+                0x00013e68                initEV3UARTInput
+                0x00013c5c                writeToUART
+ .text          0x00013f58      0x2b8 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
+                0x00013f58                exitEV3IICInput
+                0x00014038                startPollingFromIIC
+                0x000140c4                readFromIICSharedMemory
+                0x00014074                initIICPort
+                0x00013f9c                writeToIIC
+                0x00014130                readFromIIC
+                0x00014184                initEV3IICInput
+ .text          0x00014210       0xfc /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
+                0x00014284                initEV3AnalogInput
+                0x00014240                exitEV3AnalogInput
+                0x00014228                readOldDumbSensor
+                0x00014210                readNewDumbSensor
+ .text          0x0001430c      0x114 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivsi3.o)
+                0x0001430c                __udivsi3
+                0x0001430c                __aeabi_uidiv
+                0x00014400                __aeabi_uidivmod
+ .text          0x00014420      0x148 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divsi3.o)
+                0x00014420                __divsi3
+                0x00014548                __aeabi_idivmod
+                0x00014420                __aeabi_idiv
+ .text          0x00014568      0x41c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_addsubdf3.o)
+                0x00014910                __floatundidf
+                0x000148a8                __floatsidf
+                0x00014884                __aeabi_ui2d
+                0x000148a8                __aeabi_i2d
+                0x00014884                __floatunsidf
+                0x00014570                __subdf3
+                0x00014924                __floatdidf
+                0x00014574                __adddf3
+                0x00014924                __aeabi_l2d
+                0x000148d0                __aeabi_f2d
+                0x00014910                __aeabi_ul2d
+                0x00014568                __aeabi_drsub
+                0x000148d0                __extendsfdf2
+                0x00014574                __aeabi_dadd
+                0x00014570                __aeabi_dsub
+ .text          0x00014984      0x49c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_muldivdf3.o)
+                0x00014984                __muldf3
+                0x00014c14                __divdf3
+                0x00014984                __aeabi_dmul
+                0x00014c14                __aeabi_ddiv
+ .text          0x00014e20      0x144 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_cmpdf2.o)
+                0x00014e20                __gtdf2
+                0x00014e28                __ltdf2
+                0x00014ed4                __aeabi_cdcmple
+                0x00014e20                __gedf2
+                0x00014f4c                __aeabi_dcmpgt
+                0x00014e28                __ledf2
+                0x00014ed4                __aeabi_cdcmpeq
+                0x00014eec                __aeabi_dcmpeq
+                0x00014f1c                __aeabi_dcmple
+                0x00014f34                __aeabi_dcmpge
+                0x00014e30                __cmpdf2
+                0x00014f04                __aeabi_dcmplt
+                0x00014e30                __nedf2
+                0x00014eb8                __aeabi_cdrcmple
+                0x00014e30                __eqdf2
+ .text          0x00014f64       0x5c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_fixdfsi.o)
+                0x00014f64                __fixdfsi
+                0x00014f64                __aeabi_d2iz
+ .text          0x00014fc0       0xa0 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_truncdfsf2.o)
+                0x00014fc0                __aeabi_d2f
+                0x00014fc0                __truncdfsf2
+ .text          0x00015060      0x114 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_arm_cmpsf2.o)
+                0x00015060                __gesf2
+                0x00015144                __aeabi_fcmpge
+                0x000150e4                __aeabi_cfcmple
+                0x00015070                __cmpsf2
+                0x000150d4                __aeabi_cfrcmple
+                0x000150e4                __aeabi_cfcmpeq
+                0x00015068                __lesf2
+                0x00015068                __ltsf2
+                0x00015060                __gtsf2
+                0x00015114                __aeabi_fcmplt
+                0x00015070                __eqsf2
+                0x000150fc                __aeabi_fcmpeq
+                0x00015070                __nesf2
+                0x0001512c                __aeabi_fcmple
+                0x0001515c                __aeabi_fcmpgt
+ .text          0x00015174       0x3c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_aeabi_uldivmod.o)
+                0x00015174                __aeabi_uldivmod
+ .text          0x000151b0       0x14 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_dvmd_lnx.o)
+                0x000151b0                __aeabi_idiv0
+                0x000151b0                __aeabi_ldiv0
+ .text          0x000151c4       0x80 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(bpabi.o)
+                0x00015204                __gnu_ldivmod_helper
+                0x000151c4                __gnu_uldivmod_helper
+ .text          0x00015244      0x5a4 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divdi3.o)
+                0x00015244                __divdi3
+ .text          0x000157e8      0x52c /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivdi3.o)
+                0x000157e8                __udivdi3
+ .text          0x00015d14       0x78 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(elf-init.oS)
+                0x00015d14                __libc_csu_fini
+                0x00015d18                __libc_csu_init
+ .text          0x00015d8c       0x1c /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(stat.oS)
+                0x00015d8c                __stat
+                0x00015d8c                stat
  *(.gnu.warning)
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
@@ -950,168 +944,168 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
  *(.v4_bx)
  .v4_bx         0x00000000        0x0 linker stubs
 
-.fini           0x00015ce8        0xc
+.fini           0x00015da8        0xc
  *(.fini)
- .fini          0x00015ce8        0x4 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
-                0x00015ce8                _fini
- .fini          0x00015cec        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
-                0x00015cf4                PROVIDE (__etext, .)
-                0x00015cf4                PROVIDE (_etext, .)
-                0x00015cf4                PROVIDE (etext, .)
+ .fini          0x00015da8        0x4 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+                0x00015da8                _fini
+ .fini          0x00015dac        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
+                0x00015db4                PROVIDE (__etext, .)
+                0x00015db4                PROVIDE (_etext, .)
+                0x00015db4                PROVIDE (etext, .)
 
-.rodata         0x00015cf4     0x11ba
+.rodata         0x00015db4     0x11aa
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00015cf4       0x50 ./src/RobotEV3.o
- .rodata        0x00015d44      0x100 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+ .rodata        0x00015db4       0x40 ./src/RobotEV3.o
+ .rodata        0x00015df4      0x100 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
  .rodata.str1.1
-                0x00015e44       0xbf /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+                0x00015ef4       0xbf /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
                                  0xc1 (size before relaxing)
  .rodata.str1.1
-                0x00015f03       0x22 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
- *fill*         0x00015f25        0x1 00
- .rodata        0x00015f26       0xd2 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
-                0x00015f26                StepSizeTable
-                0x00015fd8                IndexTable
+                0x00015fb3       0x22 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
+ *fill*         0x00015fd5        0x1 00
+ .rodata        0x00015fd6       0xd2 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+                0x00015fd6                StepSizeTable
+                0x00016088                IndexTable
  .rodata.str1.1
-                0x00015ff8       0x19 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+                0x000160a8       0x19 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
  .rodata.str1.1
-                0x00016011       0x65 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+                0x000160c1       0x65 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
                                  0x67 (size before relaxing)
  .rodata.str1.1
-                0x00016076      0xa79 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
+                0x00016126      0xa79 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
  .rodata.str1.1
-                0x00016aef       0xcb /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
- *fill*         0x00016bba        0x2 00
- .rodata        0x00016bbc       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
+                0x00016b9f       0xcb /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
+ *fill*         0x00016c6a        0x2 00
+ .rodata        0x00016c6c       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
  .rodata.str1.1
-                0x00016bcc      0x1b1 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
+                0x00016c7c      0x1b1 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
  .rodata.str1.1
-                0x00016d7d        0x6 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
+                0x00016e2d        0x6 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
  .rodata.str1.1
-                0x00016d83        0xe /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
+                0x00016e33        0xe /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
  .rodata.str1.1
-                0x00016d91        0xd /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
+                0x00016e41        0xd /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
  .rodata.str1.1
-                0x00016d9e       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
- .rodata        0x00016dae      0x100 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_clz.o)
-                0x00016dae                __clz_tab
+                0x00016e4e       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
+ .rodata        0x00016e5e      0x100 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_clz.o)
+                0x00016e5e                __clz_tab
 
 .rodata1
  *(.rodata1)
 
-.ARM.extab      0x00016eb0      0x1e0
+.ARM.extab      0x00016f60      0x1e0
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  .ARM.extab.text.roundNo
-                0x00016eb0        0xc ./src/RobotEV3.o
+                0x00016f60        0xc ./src/RobotEV3.o
+ .ARM.extab.text.is_obstacle
+                0x00016f6c        0xc ./src/RobotEV3.o
  .ARM.extab.text.bfs
-                0x00016ebc        0xc ./src/RobotEV3.o
- .ARM.extab.text.check_box
-                0x00016ec8        0xc ./src/RobotEV3.o
+                0x00016f78        0xc ./src/RobotEV3.o
  .ARM.extab.text.turn_right
-                0x00016ed4        0xc ./src/RobotEV3.o
+                0x00016f84        0xc ./src/RobotEV3.o
  .ARM.extab.text.turn_left
-                0x00016ee0        0xc ./src/RobotEV3.o
+                0x00016f90        0xc ./src/RobotEV3.o
  .ARM.extab.text.calc_rotations
-                0x00016eec        0xc ./src/RobotEV3.o
+                0x00016f9c        0xc ./src/RobotEV3.o
  .ARM.extab.text.forward
-                0x00016ef8        0xc ./src/RobotEV3.o
+                0x00016fa8        0xc ./src/RobotEV3.o
  .ARM.extab.text.main
-                0x00016f04        0xc ./src/RobotEV3.o
- .ARM.extab     0x00016f10       0x78 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
- .ARM.extab     0x00016f88       0x90 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
- .ARM.extab     0x00017018       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
- .ARM.extab     0x00017030        0xc /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
- .ARM.extab     0x0001703c       0x3c /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
- .ARM.extab     0x00017078       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
-                0x00017090                __exidx_start = .
+                0x00016fb4        0xc ./src/RobotEV3.o
+ .ARM.extab     0x00016fc0       0x78 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+ .ARM.extab     0x00017038       0x90 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
+ .ARM.extab     0x000170c8       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+ .ARM.extab     0x000170e0        0xc /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+ .ARM.extab     0x000170ec       0x3c /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
+ .ARM.extab     0x00017128       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
+                0x00017140                __exidx_start = .
 
-.ARM.exidx      0x00017090      0x820
+.ARM.exidx      0x00017140      0x820
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000170a0        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crt1.o
+ .ARM.exidx     0x00017150        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crt1.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000170a0        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
- .ARM.exidx     0x000170a8       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
- .ARM.exidx.text.is_unseen
-                0x000170b8        0x8 ./src/RobotEV3.o
+ .ARM.exidx     0x00017150        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
+ .ARM.exidx     0x00017158       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
  .ARM.exidx.text.roundNo
-                0x000170c0        0x8 ./src/RobotEV3.o
+                0x00017168        0x8 ./src/RobotEV3.o
+ .ARM.exidx.text.is_unseen
+                0x00017170        0x8 ./src/RobotEV3.o
+ .ARM.exidx.text.is_obstacle
+                0x00017178        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.bfs
-                0x000170c8        0x8 ./src/RobotEV3.o
+                0x00017180        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.get_commands
-                0x000170d0        0x8 ./src/RobotEV3.o
- .ARM.exidx.text.check_box
-                0x000170d8        0x8 ./src/RobotEV3.o
+                0x00017188        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.turn_right
-                0x000170e0        0x8 ./src/RobotEV3.o
+                0x00017190        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.turn_left
-                0x000170e8        0x8 ./src/RobotEV3.o
+                0x00017198        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.calc_rotations
-                0x000170f0        0x8 ./src/RobotEV3.o
+                0x000171a0        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.forward
-                0x000170f8        0x8 ./src/RobotEV3.o
+                0x000171a8        0x8 ./src/RobotEV3.o
  .ARM.exidx.text.main
-                0x00017100        0x8 ./src/RobotEV3.o
- .ARM.exidx     0x00017108      0x1d8 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+                0x000171b0        0x8 ./src/RobotEV3.o
+ .ARM.exidx     0x000171b8      0x1d8 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
                                 0x270 (size before relaxing)
- .ARM.exidx     0x000172e0       0x10 /usr/local/EV3-API-master/libev3api.a(ev3.o)
+ .ARM.exidx     0x00017390       0x10 /usr/local/EV3-API-master/libev3api.a(ev3.o)
                                  0x18 (size before relaxing)
- .ARM.exidx     0x000172f0      0x178 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
+ .ARM.exidx     0x000173a0      0x178 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
                                 0x210 (size before relaxing)
- .ARM.exidx     0x00017468       0xa8 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+ .ARM.exidx     0x00017518       0xa8 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
                                  0xd8 (size before relaxing)
- .ARM.exidx     0x00017510       0x40 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+ .ARM.exidx     0x000175c0       0x40 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
                                  0x48 (size before relaxing)
- .ARM.exidx     0x00017550       0x38 /usr/local/EV3-API-master/libev3api.a(ev3_button.lejos.o)
+ .ARM.exidx     0x00017600       0x38 /usr/local/EV3-API-master/libev3api.a(ev3_button.lejos.o)
                                  0x68 (size before relaxing)
- .ARM.exidx     0x00017588       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
- .ARM.exidx     0x00017598       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
- .ARM.exidx     0x000175c8       0x50 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
+ .ARM.exidx     0x00017638       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
+ .ARM.exidx     0x00017648       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
+ .ARM.exidx     0x00017678       0x50 /usr/local/EV3-API-master/libev3api.a(bluetooth.o)
                                  0x78 (size before relaxing)
- .ARM.exidx     0x00017618       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
+ .ARM.exidx     0x000176c8       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
                                  0x38 (size before relaxing)
- .ARM.exidx     0x00017638        0x8 /usr/local/EV3-API-master/libev3api.a(ev3_command.o)
- .ARM.exidx     0x00017640       0x38 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
- .ARM.exidx     0x00017678       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
+ .ARM.exidx     0x000176e8        0x8 /usr/local/EV3-API-master/libev3api.a(ev3_command.o)
+ .ARM.exidx     0x000176f0       0x38 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
+ .ARM.exidx     0x00017728       0x18 /usr/local/EV3-API-master/libev3api.a(ev3_button.o)
                                  0x28 (size before relaxing)
- .ARM.exidx     0x00017690       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
+ .ARM.exidx     0x00017740       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
                                  0x40 (size before relaxing)
- .ARM.exidx     0x000176b0       0x80 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
+ .ARM.exidx     0x00017760       0x80 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
                                  0xe0 (size before relaxing)
- .ARM.exidx     0x00017730       0x50 /usr/local/EV3-API-master/libev3api.a(ev3_array.o)
+ .ARM.exidx     0x000177e0       0x50 /usr/local/EV3-API-master/libev3api.a(ev3_array.o)
                                  0x58 (size before relaxing)
- .ARM.exidx     0x00017780       0x70 /usr/local/EV3-API-master/libev3api.a(ev3_timer.ts.o)
+ .ARM.exidx     0x00017830       0x70 /usr/local/EV3-API-master/libev3api.a(ev3_timer.ts.o)
                                  0x90 (size before relaxing)
- .ARM.exidx     0x000177f0       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
+ .ARM.exidx     0x000178a0       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
                                  0x38 (size before relaxing)
- .ARM.exidx     0x00017820       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
+ .ARM.exidx     0x000178d0       0x30 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
                                  0x38 (size before relaxing)
- .ARM.exidx     0x00017850       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
- .ARM.exidx     0x00017870        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(bpabi.o)
+ .ARM.exidx     0x00017900       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
+ .ARM.exidx     0x00017920        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(bpabi.o)
                                  0x10 (size before relaxing)
- .ARM.exidx     0x00017878        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divdi3.o)
- .ARM.exidx     0x00017880        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x00017928        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x00017930        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00017880       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(elf-init.oS)
- .ARM.exidx     0x00017890       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(stat.oS)
+ .ARM.exidx     0x00017930       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(elf-init.oS)
+ .ARM.exidx     0x00017940       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/libc_nonshared.a(stat.oS)
                                   0x8 (size before relaxing)
  .ARM.exidx.init
-                0x00017090       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
+                0x00017140       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
                                   0x8 (size before relaxing)
  .ARM.exidx.fini
-                0x000178a0       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
+                0x00017950       0x10 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crtn.o
                                   0x8 (size before relaxing)
-                0x000178b0                __exidx_end = .
+                0x00017960                __exidx_end = .
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x000178b0        0x4
+.eh_frame       0x00017960        0x4
  *(.eh_frame)
- .eh_frame      0x000178b0        0x4 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtend.o
+ .eh_frame      0x00017960        0x4 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtend.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x000178b4                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x00017964                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
                 0x00018000                . = (0x8000 DATA_SEGMENT_ALIGN 0x1000)
 
 .eh_frame
@@ -1184,7 +1178,7 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
  *(.got)
  .got           0x00018248        0x8 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
 
-.data           0x00018250     0x2720
+.data           0x00018250     0x2a80
                 0x00018250                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
  .data.num_obstacles
@@ -1194,67 +1188,69 @@ LOAD /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4
  .data.obstacle
                 0x00018258      0x190 ./src/RobotEV3.o
                 0x00018258                obstacle
- .data.start    0x000183e8       0x10 ./src/RobotEV3.o
-                0x000183e8                start
- .data.goal     0x000183f8       0x10 ./src/RobotEV3.o
-                0x000183f8                goal
- .data          0x00018408     0x2530 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
-                0x00018574                PixelTab
-                0x00018474                UnPixelTab
-                0x00018438                IconInfo
-                0x00018408                FontInfo
-                0x0001857c                Masks
- .data          0x0001a938        0x4 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
- .data          0x0001a93c       0x34 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
+ .data.goal     0x000183e8       0x10 ./src/RobotEV3.o
+                0x000183e8                goal
+ .data.start    0x000183f8       0x10 ./src/RobotEV3.o
+                0x000183f8                start
+ .data.walls    0x00018408      0x360 ./src/RobotEV3.o
+                0x00018408                walls
+ .data          0x00018768     0x2530 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+                0x000188d4                PixelTab
+                0x000187d4                UnPixelTab
+                0x00018798                IconInfo
+                0x00018768                FontInfo
+                0x000188dc                Masks
+ .data          0x0001ac98        0x4 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+ .data          0x0001ac9c       0x34 /usr/local/EV3-API-master/libev3api.a(ev3_button.core.o)
 
 .data1
  *(.data1)
-                0x0001a970                _edata = .
-                0x0001a970                PROVIDE (edata, .)
-                0x0001a970                __bss_start = .
-                0x0001a970                __bss_start__ = .
+                0x0001acd0                _edata = .
+                0x0001acd0                PROVIDE (edata, .)
+                0x0001acd0                __bss_start = .
+                0x0001acd0                __bss_start__ = .
 
-.bss            0x0001a970     0x2ecc
+.bss            0x0001acd0     0x2ecc
  *(.dynbss)
  .dynbss        0x00000000        0x0 /usr/local/CodeSourcery/arm-2009q1/bin/../arm-none-linux-gnueabi/libc/armv4t/usr/lib/crti.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0001a970        0x1 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
- *fill*         0x0001a971        0x1 00
- .bss           0x0001a972        0xc /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
- .bss           0x0001a97e        0x1 /usr/local/EV3-API-master/libev3api.a(ev3.o)
- *fill*         0x0001a97f        0x1 00
- .bss           0x0001a980       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
- .bss           0x0001a9a0        0x1 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
- *fill*         0x0001a9a1        0x3 00
- .bss           0x0001a9a4       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
- *fill*         0x0001a9b4        0x4 00
- .bss           0x0001a9b8      0x118 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
-                0x0001a9b8                tcb
- .bss           0x0001aad0       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
- .bss           0x0001aaf0       0xd4 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
- .bss           0x0001abc4        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
- .bss           0x0001abd0       0x68 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
- .bss           0x0001ac38        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
+ .bss           0x0001acd0        0x1 /usr/local/CodeSourcery/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/armv4t/crtbegin.o
+ *fill*         0x0001acd1        0x1 00
+ .bss           0x0001acd2        0xc /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+ .bss           0x0001acde        0x1 /usr/local/EV3-API-master/libev3api.a(ev3.o)
+ *fill*         0x0001acdf        0x1 00
+ .bss           0x0001ace0       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_bluetooth.o)
+ .bss           0x0001ad00        0x1 /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
+ *fill*         0x0001ad01        0x3 00
+ .bss           0x0001ad04       0x10 /usr/local/EV3-API-master/libev3api.a(ev3_sensors.o)
+ *fill*         0x0001ad14        0x4 00
+ .bss           0x0001ad18      0x118 /usr/local/EV3-API-master/libev3api.a(ev3_timer.o)
+                0x0001ad18                tcb
+ .bss           0x0001ae30       0x20 /usr/local/EV3-API-master/libev3api.a(ev3_button.led.o)
+ .bss           0x0001ae50       0xd4 /usr/local/EV3-API-master/libev3api.a(ev3_button.nxc.o)
+ .bss           0x0001af24        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input_uart.o)
+ .bss           0x0001af30       0x68 /usr/local/EV3-API-master/libev3api.a(ev3_input_iic.o)
+ .bss           0x0001af98        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input_analog.o)
  *(COMMON)
- COMMON         0x0001ac44     0x2998 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
-                0x0001ac44                LCDInstance
-                0x0001b7dc                hwBuffer
- COMMON         0x0001d5dc       0x48 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
-                0x0001d5dc                OutputInstance
- *fill*         0x0001d624        0x4 00
- COMMON         0x0001d628      0x208 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
-                0x0001d628                SoundInstance
- COMMON         0x0001d830        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
-                0x0001d830                devCon
-                0x0001d83c                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0001d83c                _bss_end__ = .
-                0x0001d83c                __bss_end__ = .
-                0x0001d83c                . = ALIGN (0x4)
-                0x0001d83c                . = ALIGN (0x4)
-                0x0001d83c                __end__ = .
-                0x0001d83c                _end = .
-                0x0001d83c                PROVIDE (end, .)
-                0x0001d83c                . = DATA_SEGMENT_END (.)
+ COMMON         0x0001afa4     0x2998 /usr/local/EV3-API-master/libev3api.a(ev3_lcd.o)
+                0x0001afa4                LCDInstance
+                0x0001bb3c                hwBuffer
+ COMMON         0x0001d93c       0x48 /usr/local/EV3-API-master/libev3api.a(ev3_output.o)
+                0x0001d93c                OutputInstance
+ *fill*         0x0001d984        0x4 00
+ COMMON         0x0001d988      0x208 /usr/local/EV3-API-master/libev3api.a(ev3_sound.o)
+                0x0001d988                SoundInstance
+ COMMON         0x0001db90        0xc /usr/local/EV3-API-master/libev3api.a(ev3_input.o)
+                0x0001db90                devCon
+                0x0001db9c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0001db9c                _bss_end__ = .
+                0x0001db9c                __bss_end__ = .
+                0x0001db9c                . = ALIGN (0x4)
+                0x0001db9c                . = ALIGN (0x4)
+                0x0001db9c                __end__ = .
+                0x0001db9c                _end = .
+                0x0001db9c                PROVIDE (end, .)
+                0x0001db9c                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
