@@ -5,7 +5,7 @@
 
 char current_speed = 20;
 int optimal = 20;
-int current_time = 0, search_interval = 5;
+int current_time = 0, search_interval = 15;
 
 void turn_right(int amount){
 	OnFwdReg(OUT_B, (char)(current_speed + amount));
@@ -75,19 +75,30 @@ bool wander(){
 	return false;
 }
 
-void look_for_can(){
+bool look_for_can(){
 	ResetRotationCount(OUT_B);
 	OnFwdReg(OUT_B, (char)10);
 	OnRevReg(OUT_C, (char)10);
 	while(MotorRotationCount(OUT_B) < 720){
-		if(ReadSensor(IN_1) < 250){
-			OnFwdReg(OUT_B, current_speed);
-			OnFwdReg(OUT_C, current_speed);
-			return;
+		int heading = ReadSensor(IN_1);
+		if(heading < 1000){
+			ResetRotationCount(OUT_B);
+			while(ReadSensor(IN_1) < 2549);
+			int final_count = MotorRotationCount(OUT_B);
+			OnFwdReg(OUT_C, (char)10);
+			OnRevReg(OUT_B, (char)10);
+			while(MotorRotationCount(OUT_B) > ((final_count) / 2));
+			OnRevReg(OUT_B, current_speed);
+			OnRevReg(OUT_C, current_speed);
+			usleep(600000);
+			OnFwdReg(OUT_B, current_speed/2);
+			OnFwdReg(OUT_C, current_speed/2);
+			return true;
 		}
 	}
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnFwdReg(OUT_C, (char)current_speed);
+	return false;
 }
 
 int main(void)
@@ -95,19 +106,58 @@ int main(void)
 	ButtonWaitForPress(BTNCENTER);
 	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
 	time_t start;
-	bool follow = false;
+	bool follow = true;
 	OnFwdReg(OUT_B, current_speed);
 	OnFwdReg(OUT_C, current_speed);
+	while(ReadSensor(IN_3) > 10);
 	start = time(NULL);
 	while(1){
 		if(follow){
 			wall_follow();
-		}else if(wander()){
-			start = time(NULL);
 		}
 		int time_passed = time(NULL) - start;
 		if(time_passed >= search_interval){
-			look_for_can();
+			if(look_for_can()){
+				SetAllSensorMode(US_DIST_MM, NO_SEN, COL_COLOR, NO_SEN);
+				while(true){
+					int color_sensor = ReadSensor(IN_3);
+					if(color_sensor == 2){
+						SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
+						break;
+					}else if(color_sensor == 5){
+						Off(OUT_B);
+						Off(OUT_C);
+						PlayTone(TONE_C2, NOTE_WHOLE);
+						usleep(1000000);
+						ResetRotationCount(OUT_B);
+						OnFwdReg(OUT_B, (char)10);
+						OnRevReg(OUT_C, (char)10);
+						while(MotorRotationCount(OUT_B) < 360);
+						ResetRotationCount(OUT_B);
+						OnFwdReg(OUT_B, (char)10);
+						OnRevReg(OUT_C, (char)10);
+						while(MotorRotationCount(OUT_B) < 720){
+							int heading = ReadSensor(IN_1);
+							if(heading < 230){
+								ResetRotationCount(OUT_B);
+								while(ReadSensor(IN_1) < 2549);
+								int final_count = MotorRotationCount(OUT_B);
+								OnFwdReg(OUT_C, (char)10);
+								OnRevReg(OUT_B, (char)10);
+								while(MotorRotationCount(OUT_B) > ((final_count) / 2));
+								OnRevReg(OUT_B, current_speed);
+								OnRevReg(OUT_C, current_speed);
+								usleep(400000);
+								ResetRotationCount(OUT_B);
+								OnFwdReg(OUT_B, current_speed);
+								OnFwdReg(OUT_C, current_speed);
+								while(MotorRotationCount(OUT_B) < 1000);
+								exit(0);
+							}
+						}
+					}
+				}
+			}
 			start = time(NULL) + 3;
 		}
 	}

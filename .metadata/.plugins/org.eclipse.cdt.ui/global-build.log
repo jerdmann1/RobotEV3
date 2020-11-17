@@ -1,22 +1,8 @@
-20:12:47 **** Incremental Build of configuration Debug for project RobotEV3 ****
+00:07:52 **** Incremental Build of configuration Debug for project RobotEV3 ****
 make all 
-Building file: ../src/RobotEV3.c
-Invoking: Cross ARM C Compiler
-arm-none-linux-gnueabi-gcc -mcpu=arm9 -marm -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -I/usr/local/EV3-API-master -MMD -MP -MF"src/RobotEV3.d" -MT"src/RobotEV3.o" -c -o "src/RobotEV3.o" "../src/RobotEV3.c"
-Finished building: ../src/RobotEV3.c
- 
-Building target: RobotEV3.elf
-Invoking: Cross ARM C Linker
-arm-none-linux-gnueabi-gcc -mcpu=arm9 -marm -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -Xlinker --gc-sections -s -L/usr/local/EV3-API-master -Wl,-Map,"RobotEV3.map" -o "RobotEV3.elf"  ./src/RobotEV3.o   -lev3api -lpthread -lm
-Finished building target: RobotEV3.elf
- 
-Invoking: Cross ARM GNU Create Flash Image
-arm-none-linux-gnueabi-objcopy -O ihex "RobotEV3.elf"  "RobotEV3.hex"
-Finished building: RobotEV3.hex
- 
 Invoking: Cross ARM GNU Print Size
 arm-none-linux-gnueabi-size --format=berkeley "RobotEV3.elf"
    text	   data	    bss	    dec	    hex	filename
-  56199	  10168	  11980	  78347	  1320b	RobotEV3.elf
+  60532	  10452	  12508	  83492	  14624	RobotEV3.elf
 Finished building: RobotEV3.siz
  
