@@ -5,7 +5,7 @@
 
 char current_speed = 20;
 int optimal = 20;
-int current_time = 0, search_interval = 15, wander_search_interval = 300;
+int current_time = 0, search_interval = 15, wander_search_interval = 30;
 
 void turn_right(int amount){
 	OnFwdReg(OUT_B, (char)(current_speed + amount));
@@ -59,7 +59,7 @@ void wall_follow(){
 	}
 }
 
-bool wander(){
+void wander(){
 	ResetRotationCount(OUT_B);
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnRevReg(OUT_C, (char)current_speed);
@@ -80,7 +80,7 @@ bool look_for_can(int search_distance){
 		int heading = ReadSensor(IN_1);
 		if(heading < search_distance){
 			ResetRotationCount(OUT_B);
-			while(ReadSensor(IN_1) < 1200);
+			while(ReadSensor(IN_1) < search_distance);
 			int final_count = MotorRotationCount(OUT_B);
 			OnFwdReg(OUT_C, (char)10);
 			OnRevReg(OUT_B, (char)10);
@@ -127,7 +127,6 @@ int main(void)
 	ButtonWaitForPress(BTNCENTER);
 	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
 	time_t start, wander_start;
-	bool follow = true;
 	OnFwdReg(OUT_B, current_speed);
 	OnFwdReg(OUT_C, current_speed);
 	while(ReadSensor(IN_3) > 10);
@@ -142,8 +141,10 @@ int main(void)
 				goal_find();
 			}
 			start = time(NULL);
+			wander_start = time(NULL);
 		}else if(wander_time_passed >= wander_search_interval){
 			wander();
+			start = time(NULL);
 			wander_start = time(NULL);
 		}
 	}
