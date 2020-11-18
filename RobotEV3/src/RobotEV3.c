@@ -5,7 +5,7 @@
 
 char current_speed = 20;
 int optimal = 20;
-int current_time = 0, search_interval = 15, wander_search_interval = 30;
+int current_time = 0, search_interval = 15, wander_search_interval = 300;
 
 void turn_right(int amount){
 	OnFwdReg(OUT_B, (char)(current_speed + amount));
