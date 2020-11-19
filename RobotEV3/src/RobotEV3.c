@@ -5,7 +5,7 @@
 
 char current_speed = 20;
 int optimal = 20;
-int current_time = 0, search_interval = 15, wander_search_interval = 300;
+int current_time = 0, goal_search_interval = 800, wander_search_interval = 31600;
 
 void turn_right(int amount){
 	OnFwdReg(OUT_B, (char)(current_speed + amount));
@@ -68,18 +68,19 @@ bool wall_follow(){
 }
 
 bool look_for_can(int search_distance){
-	ResetRotationCount(OUT_B);
+	int initial = MotorRotationCount(OUT_B);
 	OnFwdReg(OUT_B, (char)10);
 	OnRevReg(OUT_C, (char)10);
-	while(MotorRotationCount(OUT_B) < 360){
+	while(MotorRotationCount(OUT_B) - initial < 360){
 		int heading = ReadSensor(IN_1);
 		if(heading < search_distance){
-			ResetRotationCount(OUT_B);
+			int initial_2 = MotorRotationCount(OUT_B);
 			while(ReadSensor(IN_1) < 2549);
 			int final_count = MotorRotationCount(OUT_B);
 			OnFwdReg(OUT_C, (char)10);
 			OnRevReg(OUT_B, (char)10);
-			while(MotorRotationCount(OUT_B) > ((final_count) / 2));
+			int end = MotorRotationCount(OUT_B) - ((final_count-initial_2) / 2);
+			while(MotorRotationCount(OUT_B) > end);
 			OnRevReg(OUT_B, current_speed);
 			OnRevReg(OUT_C, current_speed);
 			usleep(600000);
@@ -88,10 +89,10 @@ bool look_for_can(int search_distance){
 			return true;
 		}
 	}
-	ResetRotationCount(OUT_C);
+	int final = MotorRotationCount(OUT_C);
 	OnFwdReg(OUT_C, (char)10);
 	OnRevReg(OUT_B, (char)10);
-	while(MotorRotationCount(OUT_C) < 360);
+	while(MotorRotationCount(OUT_C) - final < 360);
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnFwdReg(OUT_C, (char)current_speed);
 	return false;
@@ -104,23 +105,23 @@ void clear_obstacle(){
 	PlayTone(TONE_C2, NOTE_WHOLE);
 	usleep(1000000);
 	SetLedWarning(0);
-	ResetRotationCount(OUT_C);
+	int final = MotorRotationCount(OUT_C);
 	OnFwdReg(OUT_C, (char)10);
 	OnRevReg(OUT_B, (char)10);
-	while(MotorRotationCount(OUT_C) < 180);
+	while(MotorRotationCount(OUT_C)-final < 180);
 	look_for_can(230);
-	ResetRotationCount(OUT_B);
-	while(MotorRotationCount(OUT_B) < 1000);
+	final = MotorRotationCount(OUT_B);
+	while(MotorRotationCount(OUT_B) - final < 1000);
 	exit(0);
 }
 
 void wander(){
-	ResetRotationCount(OUT_B);
+	int initial = MotorRotationCount(OUT_B);
 	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_COLOR, NO_SEN);
 	while(wall_follow());
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnRevReg(OUT_C, (char)current_speed);
-	while(MotorRotationCount(OUT_B) < 180);
+	while(MotorRotationCount(OUT_B)-initial < 180);
 	OnRevReg(OUT_B, current_speed);
 	OnRevReg(OUT_C, current_speed);
 	usleep(650000);
@@ -153,25 +154,23 @@ void goal_find(){
 int main(void)
 {
 	ButtonWaitForPress(BTNCENTER);
-	time_t start, wander_start;
+	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
 	OnFwdReg(OUT_B, current_speed);
 	OnFwdReg(OUT_C, current_speed);
+	int max_search = -1, max_wander = -1;
 	goal_find();
-	start = time(NULL);
-	wander_start = time(NULL);
+	ResetRotationCount(OUT_B);
+	ResetRotationCount(OUT_C);
 	while(1){
 		wall_follow();
-		int search_time_passed = time(NULL) - start;
-		int wander_time_passed = time(NULL) - wander_start;
-		if(search_time_passed >= search_interval){
+		if((MotorRotationCount(OUT_B) % goal_search_interval) <= 2 && (int)MotorRotationCount(OUT_B) > max_search){
+			max_search = (int)MotorRotationCount(OUT_B);
 			if(look_for_can(800)){
 				goal_find();
 			}
-			start = time(NULL);
-		}else if(wander_time_passed >= wander_search_interval){
+		}else if((MotorRotationCount(OUT_B) % wander_search_interval) <= 2 && (int)MotorRotationCount(OUT_B) > max_wander && MotorRotationCount(OUT_B) > 100){
+			max_wander = (int)MotorRotationCount(OUT_B);
 			wander();
-			start = time(NULL);
-			wander_start = time(NULL);
 		}
 	}
 	return 0;
