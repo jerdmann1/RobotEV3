@@ -39,7 +39,7 @@ void turn_right_high(int amount){
 	OnFwdReg(OUT_C, (char)current_speed);
 }
 
-void wall_follow(){
+bool wall_follow(){
 	int ref_sensor = ReadSensor(IN_3);
 	int difference = (optimal - ref_sensor) * 2;
 	if(difference > 9){
@@ -49,38 +49,33 @@ void wall_follow(){
 		OnFwdReg(OUT_B, (char)current_speed);
 		OnFwdReg(OUT_C, (char)current_speed);
 		turn_right_high(difference);
+		return false;
 	}else if(difference < -15){
 		turn_left_high(-difference);
+		return false;
 	}
 	else if(difference < 0){
 		turn_left(-difference);
+		return true;
 	}else if(difference > 0){
 		turn_right(difference);
+		return true;
+	}else{
+		OnFwdReg(OUT_B, (char)current_speed);
+		OnFwdReg(OUT_C, (char)current_speed);
+		return true;
 	}
-}
-
-void wander(){
-	ResetRotationCount(OUT_B);
-	OnFwdReg(OUT_B, (char)current_speed);
-	OnRevReg(OUT_C, (char)current_speed);
-	while(MotorRotationCount(OUT_B) < 180);
-	OnRevReg(OUT_B, current_speed);
-	OnRevReg(OUT_C, current_speed);
-	usleep(600000);
-	OnFwdReg(OUT_B, current_speed/2);
-	OnFwdReg(OUT_C, current_speed/2);
-	while(ReadSensor(IN_3) > 10);
 }
 
 bool look_for_can(int search_distance){
 	ResetRotationCount(OUT_B);
 	OnFwdReg(OUT_B, (char)10);
 	OnRevReg(OUT_C, (char)10);
-	while(MotorRotationCount(OUT_B) < 720){
+	while(MotorRotationCount(OUT_B) < 360){
 		int heading = ReadSensor(IN_1);
 		if(heading < search_distance){
 			ResetRotationCount(OUT_B);
-			while(ReadSensor(IN_1) < search_distance);
+			while(ReadSensor(IN_1) < 2549);
 			int final_count = MotorRotationCount(OUT_B);
 			OnFwdReg(OUT_C, (char)10);
 			OnRevReg(OUT_B, (char)10);
@@ -93,9 +88,53 @@ bool look_for_can(int search_distance){
 			return true;
 		}
 	}
+	ResetRotationCount(OUT_C);
+	OnFwdReg(OUT_C, (char)10);
+	OnRevReg(OUT_B, (char)10);
+	while(MotorRotationCount(OUT_C) < 360);
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnFwdReg(OUT_C, (char)current_speed);
 	return false;
+}
+
+void clear_obstacle(){
+	Off(OUT_B);
+	Off(OUT_C);
+	SetLedWarning(1);
+	PlayTone(TONE_C2, NOTE_WHOLE);
+	usleep(1000000);
+	SetLedWarning(0);
+	ResetRotationCount(OUT_B);
+	OnFwdReg(OUT_B, (char)10);
+	OnRevReg(OUT_C, (char)10);
+	while(MotorRotationCount(OUT_B) < 360);
+	look_for_can(230);
+	ResetRotationCount(OUT_B);
+	while(MotorRotationCount(OUT_B) < 1000);
+	exit(0);
+}
+
+void wander(){
+	ResetRotationCount(OUT_B);
+	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_COLOR, NO_SEN);
+	while(wall_follow());
+	OnFwdReg(OUT_B, (char)current_speed);
+	OnRevReg(OUT_C, (char)current_speed);
+	while(MotorRotationCount(OUT_B) < 180);
+	OnRevReg(OUT_B, current_speed);
+	OnRevReg(OUT_C, current_speed);
+	usleep(650000);
+	OnFwdReg(OUT_B, current_speed/2);
+	OnFwdReg(OUT_C, current_speed/2);
+	while(1){
+		int col = ReadSensor(IN_3);
+		if(col == 2){
+			SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
+			break;
+		}else if(col == 5){
+			clear_obstacle();
+		}
+	}
 }
 
 void goal_find(){
@@ -106,18 +145,7 @@ void goal_find(){
 			SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
 			break;
 		}else if(color_sensor == 5){
-			Off(OUT_B);
-			Off(OUT_C);
-			PlayTone(TONE_C2, NOTE_WHOLE);
-			usleep(1000000);
-			ResetRotationCount(OUT_B);
-			OnFwdReg(OUT_B, (char)10);
-			OnRevReg(OUT_C, (char)10);
-			while(MotorRotationCount(OUT_B) < 360);
-			look_for_can(230);
-			ResetRotationCount(OUT_B);
-			while(MotorRotationCount(OUT_B) < 1000);
-			exit(0);
+			clear_obstacle();
 		}
 	}
 }
@@ -137,11 +165,10 @@ int main(void)
 		int search_time_passed = time(NULL) - start;
 		int wander_time_passed = time(NULL) - wander_start;
 		if(search_time_passed >= search_interval){
-			if(look_for_can(1000)){
+			if(look_for_can(800)){
 				goal_find();
 			}
 			start = time(NULL);
-			wander_start = time(NULL);
 		}else if(wander_time_passed >= wander_search_interval){
 			wander();
 			start = time(NULL);
