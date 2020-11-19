@@ -104,10 +104,10 @@ void clear_obstacle(){
 	PlayTone(TONE_C2, NOTE_WHOLE);
 	usleep(1000000);
 	SetLedWarning(0);
-	ResetRotationCount(OUT_B);
-	OnFwdReg(OUT_B, (char)10);
-	OnRevReg(OUT_C, (char)10);
-	while(MotorRotationCount(OUT_B) < 360);
+	ResetRotationCount(OUT_C);
+	OnFwdReg(OUT_C, (char)10);
+	OnRevReg(OUT_B, (char)10);
+	while(MotorRotationCount(OUT_C) < 180);
 	look_for_can(230);
 	ResetRotationCount(OUT_B);
 	while(MotorRotationCount(OUT_B) < 1000);
