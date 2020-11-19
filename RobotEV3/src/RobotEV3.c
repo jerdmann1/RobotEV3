@@ -153,11 +153,10 @@ void goal_find(){
 int main(void)
 {
 	ButtonWaitForPress(BTNCENTER);
-	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_REFLECT, NO_SEN);
 	time_t start, wander_start;
 	OnFwdReg(OUT_B, current_speed);
 	OnFwdReg(OUT_C, current_speed);
-	while(ReadSensor(IN_3) > 10);
+	goal_find();
 	start = time(NULL);
 	wander_start = time(NULL);
 	while(1){
