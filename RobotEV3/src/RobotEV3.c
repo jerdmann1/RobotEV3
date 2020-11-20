@@ -56,10 +56,10 @@ bool wall_follow(){
 	}
 	else if(difference < 0){
 		turn_left(-difference);
-		return true;
+		return false;
 	}else if(difference > 0){
 		turn_right(difference);
-		return true;
+		return false;
 	}else{
 		OnFwdReg(OUT_B, (char)current_speed);
 		OnFwdReg(OUT_C, (char)current_speed);
@@ -118,13 +118,13 @@ void clear_obstacle(){
 void wander(){
 	int initial = MotorRotationCount(OUT_B);
 	SetAllSensorMode(US_DIST_MM, NO_SEN, COL_COLOR, NO_SEN);
-	while(wall_follow());
+	while(!wall_follow());
 	OnFwdReg(OUT_B, (char)current_speed);
 	OnRevReg(OUT_C, (char)current_speed);
 	while(MotorRotationCount(OUT_B)-initial < 180);
 	OnRevReg(OUT_B, current_speed);
 	OnRevReg(OUT_C, current_speed);
-	usleep(650000);
+	usleep(600000);
 	OnFwdReg(OUT_B, current_speed/2);
 	OnFwdReg(OUT_C, current_speed/2);
 	while(1){
